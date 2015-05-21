@@ -17,19 +17,19 @@
 # limitations under the License.
 #
 
+include_recipe 'apt'
+
 apt_repository "erlangsolutions" do
   uri          "http://packages.erlang-solutions.com/ubuntu"
   distribution node['lsb']['codename']
   components   ["contrib"]
   key          "http://packages.erlang-solutions.com/ubuntu/erlang_solutions.asc"
-
   action :add
 end
 
 execute "apt-get-update" do
   command "apt-get update"
-  ignore_failure true
-  action :nothing
+  action :run
 end
 
 # esl-erlang fails to install without these, there is no -nox version. MK.
