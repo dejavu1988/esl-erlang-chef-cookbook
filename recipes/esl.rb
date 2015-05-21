@@ -18,10 +18,10 @@
 #
 
 apt_repository "erlangsolutions" do
-  uri          "http://binaries.erlang-solutions.com/ubuntu"
+  uri          "http://packages.erlang-solutions.com/ubuntu"
   distribution node['lsb']['codename']
   components   ["contrib"]
-  key          "http://binaries.erlang-solutions.com/debian/erlang_solutions.asc"
+  key          "http://packages.erlang-solutions.com/ubuntu/erlang_solutions.asc"
 
   action :add
 end
@@ -34,6 +34,6 @@ package "libwxgtk3.0-0" do
   action :install
 end
 
-package "erlang" do
+package "esl-erlang" do
   action :install
 end
