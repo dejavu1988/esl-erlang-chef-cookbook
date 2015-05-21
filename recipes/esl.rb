@@ -26,6 +26,12 @@ apt_repository "erlangsolutions" do
   action :add
 end
 
+execute "apt-get-update" do
+  command "apt-get update"
+  ignore_failure true
+  action :nothing
+end
+
 # esl-erlang fails to install without these, there is no -nox version. MK.
 package "libwxbase3.0-0" do
   action :install
@@ -34,6 +40,6 @@ package "libwxgtk3.0-0" do
   action :install
 end
 
-package "esl-erlang" do
+package "erlang" do
   action :install
 end
