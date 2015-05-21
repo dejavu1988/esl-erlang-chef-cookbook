@@ -18,7 +18,7 @@
 #
 
 apt_repository "erlangsolutions" do
-  uri          "http://binaries.erlang-solutions.com/debian"
+  uri          "http://binaries.erlang-solutions.com/ubuntu"
   distribution node['lsb']['codename']
   components   ["contrib"]
   key          "http://binaries.erlang-solutions.com/debian/erlang_solutions.asc"
@@ -27,10 +27,10 @@ apt_repository "erlangsolutions" do
 end
 
 # esl-erlang fails to install without these, there is no -nox version. MK.
-package "libwxbase2.8-0" do
+package "libwxbase3.0-0" do
   action :install
 end
-package "libwxgtk2.8-0" do
+package "libwxgtk3.0-0" do
   action :install
 end
 
