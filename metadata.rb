@@ -6,6 +6,6 @@ version           "1.0.0"
 
 recipe "erlang::esl", "Installs Erlang using Erlang Solutions apt repository"
 
-%w{ ubuntu debian }.each do |os|
+%w{ ubuntu }.each do |os|
   supports os
 end
