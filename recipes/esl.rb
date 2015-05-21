@@ -34,6 +34,6 @@ package "libwxgtk3.0-0" do
   action :install
 end
 
-package "esl-erlang" do
+package "erlang" do
   action :install
 end
