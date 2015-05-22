@@ -41,5 +41,5 @@ package "libwxgtk3.0-0" do
 end
 
 package "erlang" do
-  action :install
+  action :upgrade
 end
